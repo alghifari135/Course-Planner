@@ -8,7 +8,7 @@ namespace PembangkitMatkul
         private string nama;
         private int mulai;
         private int selesai;
-        private List<SimpulDFS> tetangga;
+        private List<Simpul> tetangga;
         private bool dikunjungi;
 
         public string Nama
@@ -47,7 +47,7 @@ namespace PembangkitMatkul
             }
         }
 
-        public List<SimpulDFS> Tetangga
+        public List<Simpul> Tetangga
         {
             get
             {
@@ -114,7 +114,7 @@ namespace PembangkitMatkul
             for (int i=0; i<simpul.Count; i++)
             {
                 SimpulDFS S = simpul[i];
-                if (S.Dikunjungi==false)
+                if (S.dikunjungi==false)
                 {
                     KunjungiSimpul(S);
                 }
