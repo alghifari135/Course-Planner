@@ -33,19 +33,8 @@ namespace PembangkitMatkulNew
             C2.KumpulanSimpul.Add("C4", C4);
             C3.KumpulanSimpul.Add("C5", C5);
             DFS dfs = new DFS();
-            foreach (KeyValuePair<string, SimpulDFS> pair in C1.KumpulanSimpul)
-            {
-                for (int i=0; i<C1.KumpulanSimpul[pair.Key].Tetangga.Count; i++)
-                {
-                    C1.KumpulanSimpul[C1.KumpulanSimpul[pair.Key].Tetangga[i]].SisiMasuk++;
-                }       
-            }
-            foreach (KeyValuePair<string, SimpulDFS> pair in C1.KumpulanSimpul)
-            {
-                if (C1.KumpulanSimpul[pair.Key].SisiMasuk == 0) {
-                    dfs.DFSM(C1.KumpulanSimpul[pair.Key]);
-                }
-            }
+            dfs.HitungSisiMasuk(C1);
+            dfs.DFSMain(C1);
             foreach (KeyValuePair<string, SimpulDFS> pair in C1.KumpulanSimpul)
             {
                 Console.WriteLine("{0}, {1}, {2}", pair.Key, C1.KumpulanSimpul[pair.Key].Mulai, C1.KumpulanSimpul[pair.Key].Selesai);
