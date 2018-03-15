@@ -16,10 +16,27 @@ namespace PembangkitMatkulNew
             foreach (string baris in kumpulanBaris)
             {
                 simpulFile = baris.Split(new char[] { ',', '.', ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                SimpulBFS.HashBFS.Add(simpulFile[0], new SimpulBFS(simpulFile[0]));
+
+                if (!SimpulBFS.DaftarSimpul.ContainsKey(simpulFile[0]))
+                {
+                    SimpulBFS.DaftarSimpul.Add(simpulFile[0], new SimpulBFS(simpulFile[0]));
+                }
+                if (!SimpulDFS.KumpulanSimpul.ContainsKey(simpulFile[0]))
+                {
+                    SimpulDFS.KumpulanSimpul.Add(simpulFile[0], new SimpulDFS(simpulFile[0]));
+                }
                 for (int i = 1; i < simpulFile.Length; i++)
                 {
-                    SimpulBFS.HashBFS[simpulFile[0]].TambahTetangga(simpulFile[i]);
+                    if (!SimpulBFS.DaftarSimpul.ContainsKey(simpulFile[i]))
+                    {
+                        SimpulBFS.DaftarSimpul.Add(simpulFile[i], new SimpulBFS(simpulFile[i]));
+                    }
+                    SimpulBFS.DaftarSimpul[simpulFile[i]].Tetangga.Add(simpulFile[0]);
+                    if (!SimpulDFS.KumpulanSimpul.ContainsKey(simpulFile[i]))
+                    {
+                        SimpulDFS.KumpulanSimpul.Add(simpulFile[i], new SimpulDFS(simpulFile[i]));
+                    }
+                    SimpulDFS.KumpulanSimpul[simpulFile[i]].Tetangga.Add(simpulFile[0]);
                 }
             }
         }

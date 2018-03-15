@@ -8,13 +8,13 @@ namespace PembangkitMatkulNew
 {
     class DFS
     {
-        public void DFSMain(SimpulDFS S)
+        public void DFSMain()
         {
-            foreach (KeyValuePair<string, SimpulDFS> pair in S.KumpulanSimpul)
+            foreach (KeyValuePair<string, SimpulDFS> pair in SimpulDFS.KumpulanSimpul)
             {
-                if (S.KumpulanSimpul[pair.Key].SisiMasuk == 0 && S.KumpulanSimpul[pair.Key].Dikunjungi == false)
+                if (SimpulDFS.KumpulanSimpul[pair.Key].SisiMasuk == 0 && SimpulDFS.KumpulanSimpul[pair.Key].Dikunjungi == false)
                 {
-                    DFSRekursif(S.KumpulanSimpul[pair.Key]);
+                    DFSRekursif(SimpulDFS.KumpulanSimpul[pair.Key]);
                 }
             }
         }
@@ -23,22 +23,22 @@ namespace PembangkitMatkulNew
             S.Mulai = ++S.Waktu;
             for (int i = 0; i < S.Tetangga.Count; i++)
             {
-                if (!S.KumpulanSimpul[S.Tetangga[i]].Dikunjungi)
+                if (!SimpulDFS.KumpulanSimpul[S.Tetangga[i]].Dikunjungi)
                 {
 
-                    DFSRekursif(S.KumpulanSimpul[S.Tetangga[i]]);
+                    DFSRekursif(SimpulDFS.KumpulanSimpul[S.Tetangga[i]]);
                 }
             }
             S.Selesai = ++S.Waktu;
             S.Dikunjungi = true;
         }
-        public void HitungSisiMasuk(SimpulDFS S)
+        public void HitungSisiMasuk()
         {
-            foreach (KeyValuePair<string, SimpulDFS> pair in S.KumpulanSimpul)
+            foreach (KeyValuePair<string, SimpulDFS> pair in SimpulDFS.KumpulanSimpul)
             {
-                for (int i = 0; i < S.KumpulanSimpul[pair.Key].Tetangga.Count; i++)
+                for (int i = 0; i < SimpulDFS.KumpulanSimpul[pair.Key].Tetangga.Count; i++)
                 {
-                    S.KumpulanSimpul[S.KumpulanSimpul[pair.Key].Tetangga[i]].SisiMasuk++;
+                    SimpulDFS.KumpulanSimpul[SimpulDFS.KumpulanSimpul[pair.Key].Tetangga[i]].SisiMasuk++;
                 }
             }
         }

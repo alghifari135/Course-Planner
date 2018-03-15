@@ -10,12 +10,13 @@ namespace PembangkitMatkulNew
     {
         static void Main(string[] args)
         {
+            BacaFile BF = new BacaFile("filesimpul.txt");
             DFS dfs = new DFS();
-            dfs.HitungSisiMasuk(C1);
-            dfs.DFSMain(C1);
-            foreach (KeyValuePair<string, SimpulDFS> pair in C1.KumpulanSimpul)
+            dfs.HitungSisiMasuk();
+            dfs.DFSMain();
+            foreach (KeyValuePair<string, SimpulDFS> pair in SimpulDFS.KumpulanSimpul)
             {
-                Console.WriteLine("{0}, {1}, {2}", pair.Key, C1.KumpulanSimpul[pair.Key].Mulai, C1.KumpulanSimpul[pair.Key].Selesai);
+                Console.WriteLine("{0}, {1}, {2}", pair.Key, SimpulDFS.KumpulanSimpul[pair.Key].Mulai, SimpulDFS.KumpulanSimpul[pair.Key].Selesai);
             }
         }
     }

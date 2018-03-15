@@ -49,7 +49,7 @@ namespace PembangkitMatkulNew
                 waktu = value;
             }
         }
-        public Dictionary<string, SimpulDFS> KumpulanSimpul
+        static public Dictionary<string, SimpulDFS> KumpulanSimpul
         {
             get
             {
@@ -60,8 +60,9 @@ namespace PembangkitMatkulNew
                 kumpulanSimpul = value;
             }
         }
-        public SimpulDFS()
+        public SimpulDFS(string nama)
         {
+            this.namaMatkul = nama;
             tetangga = new List<string>();
             dikunjungi = false;
             sisiMasuk = 0;

@@ -19,11 +19,6 @@ namespace PembangkitMatkulNew
             this.tetangga = new List<string>();
             this.tetanggaMasuk = 0;
         }
-        
-        public void TambahTetangga(string S)
-        {
-            tetangga.Add(S);
-        }
 
 
         /// Getter + Setter
