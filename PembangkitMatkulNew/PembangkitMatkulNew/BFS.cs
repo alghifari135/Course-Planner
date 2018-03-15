@@ -18,6 +18,8 @@ namespace PembangkitMatkulNew
                     SimpulBFS.DaftarSimpul[T].TetanggaMasuk++;
                 }
             }
+
+
         }
     }
 }
