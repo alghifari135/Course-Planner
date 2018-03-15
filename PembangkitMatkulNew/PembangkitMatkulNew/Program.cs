@@ -10,6 +10,8 @@ namespace PembangkitMatkulNew
     {
         static void Main(string[] args)
         {
+            BFS bfs = new BFS();
+            bfs.BacaFile("filesimpul.txt");
         }
     }
 }
