@@ -21,10 +21,12 @@ namespace PembangkitMatkulNew
                 {
                     SimpulBFS.DaftarSimpul.Add(simpulFile[0], new SimpulBFS(simpulFile[0]));
                 }
+                SimpulBFS.DaftarSimpul[simpulFile[0]].TetanggaMasuk = simpulFile.Length - 1;
                 if (!SimpulDFS.KumpulanSimpul.ContainsKey(simpulFile[0]))
                 {
                     SimpulDFS.KumpulanSimpul.Add(simpulFile[0], new SimpulDFS(simpulFile[0]));
                 }
+                SimpulDFS.KumpulanSimpul[simpulFile[0]].SisiMasuk = simpulFile.Length - 1;
                 for (int i = 1; i < simpulFile.Length; i++)
                 {
                     if (!SimpulBFS.DaftarSimpul.ContainsKey(simpulFile[i]))
@@ -32,6 +34,7 @@ namespace PembangkitMatkulNew
                         SimpulBFS.DaftarSimpul.Add(simpulFile[i], new SimpulBFS(simpulFile[i]));
                     }
                     SimpulBFS.DaftarSimpul[simpulFile[i]].Tetangga.Add(simpulFile[0]);
+
                     if (!SimpulDFS.KumpulanSimpul.ContainsKey(simpulFile[i]))
                     {
                         SimpulDFS.KumpulanSimpul.Add(simpulFile[i], new SimpulDFS(simpulFile[i]));

@@ -9,17 +9,44 @@ namespace PembangkitMatkulNew
 {
     class BFS
     {
+        static private List<SimpulBFS> daftarTerurutBFS = new List<SimpulBFS>();
+        static public List<SimpulBFS> DaftarTerurutBFS
+        {
+            get
+            {
+                return daftarTerurutBFS;
+            }
+            set
+            {
+                daftarTerurutBFS = value;
+            }
+        }
+        
         public void MulaiBFS()
         {
-            foreach (KeyValuePair<string, SimpulBFS> S in SimpulBFS.DaftarSimpul)
+            
+            for (int i = 1; i <= SimpulBFS.DaftarSimpul.Count; i++)
             {
-                foreach(string T in SimpulBFS.DaftarSimpul[S.Key].Tetangga)
+                foreach (KeyValuePair<string, SimpulBFS> pair in SimpulBFS.DaftarSimpul)
                 {
-                    SimpulBFS.DaftarSimpul[T].TetanggaMasuk++;
+                    if (SimpulBFS.DaftarSimpul[pair.Key].TetanggaMasuk == 0)
+                    {
+                        TambahUrutan(SimpulBFS.DaftarSimpul[pair.Key]);
+                        SimpulBFS.DaftarSimpul[pair.Key].TetanggaMasuk--;
+                        break;
+                    }
                 }
             }
+            
+        }
 
-
+        private void TambahUrutan (SimpulBFS S)
+        {
+            DaftarTerurutBFS.Add(S);
+            foreach(string key in S.Tetangga)
+            {
+                SimpulBFS.DaftarSimpul[key].TetanggaMasuk--;
+            }
         }
     }
 }

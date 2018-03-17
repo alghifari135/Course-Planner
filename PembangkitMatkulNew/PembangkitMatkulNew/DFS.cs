@@ -32,6 +32,7 @@ namespace PembangkitMatkulNew
             S.Selesai = ++S.Waktu;
             S.Dikunjungi = true;
         }
+        /*
         public void HitungSisiMasuk()
         {
             foreach (KeyValuePair<string, SimpulDFS> pair in SimpulDFS.KumpulanSimpul)
@@ -42,5 +43,6 @@ namespace PembangkitMatkulNew
                 }
             }
         }
+        */
     }
 }
