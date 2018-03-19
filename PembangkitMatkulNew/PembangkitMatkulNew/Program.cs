@@ -20,6 +20,8 @@ namespace PembangkitMatkulNew
             {
                 Console.WriteLine("{0}, {1}, {2}", pair.Key, SimpulDFS.KumpulanSimpul[pair.Key].Mulai, SimpulDFS.KumpulanSimpul[pair.Key].Selesai);
             }
+
+            //Menampilkan urutan BFS
             Console.WriteLine("Urutan BFS :");
             int i = 1;
             foreach (SimpulBFS simpul in BFS.DaftarTerurutBFS)
