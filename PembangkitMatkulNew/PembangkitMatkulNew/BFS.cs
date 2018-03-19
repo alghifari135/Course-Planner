@@ -48,5 +48,15 @@ namespace PembangkitMatkulNew
                 SimpulBFS.DaftarSimpul[key].TetanggaMasuk--;
             }
         }
+        public void CetakHasilBFS()
+        {
+            Console.WriteLine("Urutan BFS :");
+            int i = 1;
+            foreach (SimpulBFS simpul in BFS.DaftarTerurutBFS)
+            {
+                Console.WriteLine("{0}. {1}", i, simpul.Nama);
+                i++;
+            }
+        }
     }
 }

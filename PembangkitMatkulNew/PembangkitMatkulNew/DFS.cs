@@ -8,6 +8,18 @@ namespace PembangkitMatkulNew
 {
     class DFS
     {
+        static private List<SimpulDFS> daftarTerurutDFS = new List<SimpulDFS>();
+        static public List<SimpulDFS> DaftarTerurutDFS
+        {
+            get
+            {
+                return daftarTerurutDFS;
+            }
+            set
+            {
+                daftarTerurutDFS = value;
+            }
+        }
         public void DFSMain()
         {
             foreach (KeyValuePair<string, SimpulDFS> pair in SimpulDFS.KumpulanSimpul)
@@ -17,6 +29,7 @@ namespace PembangkitMatkulNew
                     DFSRekursif(SimpulDFS.KumpulanSimpul[pair.Key]);
                 }
             }
+            DaftarTerurutDFS.Reverse();
         }
         public void DFSRekursif(SimpulDFS S)
         {
@@ -25,24 +38,20 @@ namespace PembangkitMatkulNew
             {
                 if (!SimpulDFS.KumpulanSimpul[S.Tetangga[i]].Dikunjungi)
                 {
-
                     DFSRekursif(SimpulDFS.KumpulanSimpul[S.Tetangga[i]]);
                 }
             }
             S.Selesai = ++S.Waktu;
             S.Dikunjungi = true;
+            DaftarTerurutDFS.Add(S);
         }
-        /*
-        public void HitungSisiMasuk()
+        public void CetakHasilDFS()
         {
-            foreach (KeyValuePair<string, SimpulDFS> pair in SimpulDFS.KumpulanSimpul)
+            Console.WriteLine("Urutan DFS : ");
+            for (int i=0; i<DaftarTerurutDFS.Count; i++)
             {
-                for (int i = 0; i < SimpulDFS.KumpulanSimpul[pair.Key].Tetangga.Count; i++)
-                {
-                    SimpulDFS.KumpulanSimpul[SimpulDFS.KumpulanSimpul[pair.Key].Tetangga[i]].SisiMasuk++;
-                }
+                Console.WriteLine("{0}. {1}", i+1, DaftarTerurutDFS[i].NamaMatkul);
             }
-        }
-        */
+        }   
     }
 }
