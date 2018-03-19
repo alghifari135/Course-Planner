@@ -1,0 +1,13 @@
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\obj\Debug\PembangkitMatkul.csprojResolveAssemblyReference.cache
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\obj\Debug\PembangkitMatkul.csproj.CoreCompileInputs.cache
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\PembangkitMatkulNew.exe.config
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\PembangkitMatkulNew.exe
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\PembangkitMatkulNew.pdb
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.dll
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.Drawing.dll
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.xml
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.Drawing.xml
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\obj\Debug\PembangkitMatkulNew.exe
+D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\obj\Debug\PembangkitMatkulNew.pdb
