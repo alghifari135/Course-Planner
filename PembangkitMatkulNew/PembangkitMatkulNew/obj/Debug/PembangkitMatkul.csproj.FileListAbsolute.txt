@@ -11,3 +11,15 @@ D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-S
 D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
 D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\obj\Debug\PembangkitMatkulNew.exe
 D:\Bahan Kuliah\Semester 4\IF2211 Strategi Algoritma\Tugas Besar 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\obj\Debug\PembangkitMatkulNew.pdb
+E:\Knowledge\Computer Science\Academic\Semester 4\IF2211 - Strategi Algoritma\Tugas\Tubes 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\PembangkitMatkulNew.exe.config
+E:\Knowledge\Computer Science\Academic\Semester 4\IF2211 - Strategi Algoritma\Tugas\Tubes 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\PembangkitMatkulNew.exe
+E:\Knowledge\Computer Science\Academic\Semester 4\IF2211 - Strategi Algoritma\Tugas\Tubes 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\PembangkitMatkulNew.pdb
+E:\Knowledge\Computer Science\Academic\Semester 4\IF2211 - Strategi Algoritma\Tugas\Tubes 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.dll
+E:\Knowledge\Computer Science\Academic\Semester 4\IF2211 - Strategi Algoritma\Tugas\Tubes 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.Drawing.dll
+E:\Knowledge\Computer Science\Academic\Semester 4\IF2211 - Strategi Algoritma\Tugas\Tubes 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+E:\Knowledge\Computer Science\Academic\Semester 4\IF2211 - Strategi Algoritma\Tugas\Tubes 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.xml
+E:\Knowledge\Computer Science\Academic\Semester 4\IF2211 - Strategi Algoritma\Tugas\Tubes 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.Drawing.xml
+E:\Knowledge\Computer Science\Academic\Semester 4\IF2211 - Strategi Algoritma\Tugas\Tubes 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+E:\Knowledge\Computer Science\Academic\Semester 4\IF2211 - Strategi Algoritma\Tugas\Tubes 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\obj\Debug\PembangkitMatkul.csprojResolveAssemblyReference.cache
+E:\Knowledge\Computer Science\Academic\Semester 4\IF2211 - Strategi Algoritma\Tugas\Tubes 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\obj\Debug\PembangkitMatkulNew.exe
+E:\Knowledge\Computer Science\Academic\Semester 4\IF2211 - Strategi Algoritma\Tugas\Tubes 2\Topological-Sort-Visualizer\PembangkitMatkulNew\PembangkitMatkulNew\obj\Debug\PembangkitMatkulNew.pdb
