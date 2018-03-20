@@ -36,7 +36,7 @@ namespace PembangkitMatkulNew
         public void DFSRekursif(SimpulDFS S)
         {
             S.Mulai = ++S.Waktu;
-            this.CetakHasilDFS();
+            this.CetakLangkahDFS();
             for (int i = 0; i < S.Tetangga.Count; i++)
             {
                 if (!SimpulDFS.KumpulanSimpul[S.Tetangga[i]].Dikunjungi)
@@ -45,11 +45,12 @@ namespace PembangkitMatkulNew
                 }
             }
             S.Selesai = ++S.Waktu;
-            this.CetakHasilDFS();
+            S.Semester = SimpulDFS.semesterX--;
+            this.CetakLangkahDFS();
             S.Dikunjungi = true;
             DaftarTerurutDFS.Add(S);
         }
-        public void CetakHasilDFS()
+        public void CetakLangkahDFS()
         {
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
             foreach (KeyValuePair<string, SimpulDFS> pair in SimpulDFS.KumpulanSimpul)
@@ -68,7 +69,28 @@ namespace PembangkitMatkulNew
             Bitmap bitmap = new Bitmap(width, (int)(graph.Height *
             (width / graph.Width)), PixelFormat.Format32bppPArgb);
             renderer.Render(bitmap);
-            bitmap.Save("state" +"DFS"+ SimpulDFS.waktu + ".png");
-        }   
+            bitmap.Save("stateDFS"+ SimpulDFS.waktu + ".png");
+        }
+        public void CetakHasilDFS()
+        {
+            Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
+            foreach (SimpulDFS simpul in DaftarTerurutDFS)
+            {
+                foreach (string tetangga in simpul.Tetangga)
+                {
+                    graph.AddEdge("Semester "+ simpul.Semester + ": " + simpul.NamaMatkul, "Semester " + SimpulDFS.KumpulanSimpul[tetangga].Semester + ": " + tetangga);
+                }
+            }
+
+            Microsoft.Msagl.GraphViewerGdi.GraphRenderer renderer
+            = new Microsoft.Msagl.GraphViewerGdi.GraphRenderer
+            (graph);
+            renderer.CalculateLayout();
+            int width = 500;
+            Bitmap bitmap = new Bitmap(width, (int)(graph.Height *
+            (width / graph.Width)), PixelFormat.Format32bppPArgb);
+            renderer.Render(bitmap);
+            bitmap.Save("HasilDFS.png");
+        }
     }
 }

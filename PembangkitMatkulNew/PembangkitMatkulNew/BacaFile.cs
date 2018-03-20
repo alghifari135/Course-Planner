@@ -42,6 +42,7 @@ namespace PembangkitMatkulNew
                     SimpulDFS.KumpulanSimpul[simpulFile[i]].Tetangga.Add(simpulFile[0]);
                 }
             }
+            SimpulDFS.semesterX = SimpulDFS.KumpulanSimpul.Count;
         }
     }
 }

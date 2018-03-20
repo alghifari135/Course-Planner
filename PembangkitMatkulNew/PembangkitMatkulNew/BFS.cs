@@ -138,7 +138,7 @@ namespace PembangkitMatkulNew
             Bitmap bitmap = new Bitmap(width, (int)(graph.Height *
             (width / graph.Width)), PixelFormat.Format32bppPArgb);
             renderer.Render(bitmap);
-            bitmap.Save("state"+ state +".png");
+            bitmap.Save("stateBFS"+ state +".png");
             State++;
         }
     }

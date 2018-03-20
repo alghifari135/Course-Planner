@@ -18,7 +18,7 @@ namespace PembangkitMatkulNew
             BFS bfs = new BFS();
             dfs.DFSMain();
             bfs.MulaiBFS();
-            
+            dfs.CetakHasilDFS();
         }
     
     }

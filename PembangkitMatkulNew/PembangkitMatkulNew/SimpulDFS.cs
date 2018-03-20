@@ -10,12 +10,25 @@ namespace PembangkitMatkulNew
     {
         static public int waktu = 0;
         static public Dictionary<string, SimpulDFS> kumpulanSimpul = new Dictionary<string, SimpulDFS>();
+        static public int semesterX;
         private List<string> tetangga;
+        private int semester;
         private string namaMatkul;
         private int mulai;
         private int selesai;
         private bool dikunjungi;
         private int sisiMasuk;
+        public int Semester
+        {
+            get
+            {
+                return semester;
+            }
+            set
+            {
+                semester = value;
+            }
+        }
         public int SisiMasuk
         {
             get
