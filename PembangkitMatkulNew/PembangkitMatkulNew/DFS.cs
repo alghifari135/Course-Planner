@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace PembangkitMatkulNew
 {
@@ -34,6 +36,7 @@ namespace PembangkitMatkulNew
         public void DFSRekursif(SimpulDFS S)
         {
             S.Mulai = ++S.Waktu;
+            this.CetakHasilDFS();
             for (int i = 0; i < S.Tetangga.Count; i++)
             {
                 if (!SimpulDFS.KumpulanSimpul[S.Tetangga[i]].Dikunjungi)
@@ -42,16 +45,30 @@ namespace PembangkitMatkulNew
                 }
             }
             S.Selesai = ++S.Waktu;
+            this.CetakHasilDFS();
             S.Dikunjungi = true;
             DaftarTerurutDFS.Add(S);
         }
         public void CetakHasilDFS()
         {
-            Console.WriteLine("Urutan DFS : ");
-            for (int i=0; i<DaftarTerurutDFS.Count; i++)
+            Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
+            foreach (KeyValuePair<string, SimpulDFS> pair in SimpulDFS.KumpulanSimpul)
             {
-                Console.WriteLine("{0}. {1}", i+1, DaftarTerurutDFS[i].NamaMatkul);
+                foreach (string tetangga in SimpulDFS.KumpulanSimpul[pair.Key].Tetangga)
+                {
+                    graph.AddEdge(pair.Key + ", m=" + SimpulDFS.KumpulanSimpul[pair.Key].Mulai + ", s=" + SimpulDFS.KumpulanSimpul[pair.Key].Selesai, tetangga + ", m="+ SimpulDFS.KumpulanSimpul[tetangga].Mulai + ", s=" + SimpulDFS.KumpulanSimpul[tetangga].Selesai);
+                }
             }
+            
+            Microsoft.Msagl.GraphViewerGdi.GraphRenderer renderer
+            = new Microsoft.Msagl.GraphViewerGdi.GraphRenderer
+            (graph);
+            renderer.CalculateLayout();
+            int width = 500;
+            Bitmap bitmap = new Bitmap(width, (int)(graph.Height *
+            (width / graph.Width)), PixelFormat.Format32bppPArgb);
+            renderer.Render(bitmap);
+            bitmap.Save("state" +"DFS"+ SimpulDFS.waktu + ".png");
         }   
     }
 }
