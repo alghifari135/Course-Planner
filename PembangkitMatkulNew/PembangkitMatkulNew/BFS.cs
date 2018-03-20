@@ -4,12 +4,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace PembangkitMatkulNew
 {
     class BFS
     {
+        static public int state = 0;
         static private List<SimpulBFS> daftarTerurutBFS = new List<SimpulBFS>();
+        static public int State
+        {
+            get
+            {
+                return state;
+            }
+            set
+            {
+                state = value;
+            }
+        }
         static public List<SimpulBFS> DaftarTerurutBFS
         {
             get
@@ -47,16 +61,29 @@ namespace PembangkitMatkulNew
             {
                 SimpulBFS.DaftarSimpul[key].TetanggaMasuk--;
             }
+            this.CetakHasilBFS(State);
+            State = State + 1 ;
         }
-        public void CetakHasilBFS()
+
+        public void CetakHasilBFS(int State)
         {
-            Console.WriteLine("Urutan BFS :");
-            int i = 1;
+            Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
             foreach (SimpulBFS simpul in BFS.DaftarTerurutBFS)
             {
-                Console.WriteLine("{0}. {1}", i, simpul.Nama);
-                i++;
+                foreach (string tetangga in simpul.Tetangga)
+                {
+                    graph.AddEdge(simpul.Nama, tetangga);
+                }
             }
+            Microsoft.Msagl.GraphViewerGdi.GraphRenderer renderer
+            = new Microsoft.Msagl.GraphViewerGdi.GraphRenderer
+            (graph);
+            renderer.CalculateLayout();
+            int width = 50;
+            Bitmap bitmap = new Bitmap(width, (int)(graph.Height *
+            (width / graph.Width)), PixelFormat.Format32bppPArgb);
+            renderer.Render(bitmap);
+            bitmap.Save("state"+ state +".png");
         }
     }
 }
