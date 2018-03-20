@@ -8,8 +8,8 @@ namespace PembangkitMatkulNew
 {
     class SimpulDFS
     {
-        static private int waktu = 0;
-        static private Dictionary<string, SimpulDFS> kumpulanSimpul = new Dictionary<string, SimpulDFS>();
+        static public int waktu = 0;
+        static public Dictionary<string, SimpulDFS> kumpulanSimpul = new Dictionary<string, SimpulDFS>();
         private List<string> tetangga;
         private string namaMatkul;
         private int mulai;

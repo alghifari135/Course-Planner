@@ -18,7 +18,6 @@ namespace PembangkitMatkulNew
             BFS bfs = new BFS();
             dfs.DFSMain();
             bfs.MulaiBFS();
-            dfs.CetakHasilDFS();
 
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
             foreach (SimpulBFS simpul in BFS.DaftarTerurutBFS)
