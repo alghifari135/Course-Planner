@@ -130,7 +130,6 @@ namespace PembangkitMatkulNew
 
         public void CetakGambar()
         {
-            
             Microsoft.Msagl.GraphViewerGdi.GraphRenderer renderer
             = new Microsoft.Msagl.GraphViewerGdi.GraphRenderer
             (graph);
