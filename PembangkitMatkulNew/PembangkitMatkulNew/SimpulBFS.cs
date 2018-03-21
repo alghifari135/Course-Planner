@@ -12,7 +12,19 @@ namespace PembangkitMatkulNew
         private int tetanggaMasuk;
         private List<string> tetangga;
         static private Dictionary<string, SimpulBFS> daftarSimpul = new Dictionary<string, SimpulBFS>();
-
+        static public int semesterX=1;
+        private int semester;
+        public int Semester
+        {
+            get
+            {
+                return semester;
+            }
+            set
+            {
+                semester = value;
+            }
+        }
         public SimpulBFS(string nama)
         {
             this.nama = nama;

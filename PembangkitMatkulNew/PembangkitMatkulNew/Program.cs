@@ -13,7 +13,7 @@ namespace PembangkitMatkulNew
     {
         static void Main(string[] args)
         {
-            BacaFile BF = new BacaFile("filesimpul.txt");
+            BacaFile BF = new BacaFile("filesimpul3.txt");
             DFS dfs = new DFS();
             BFS bfs = new BFS();
             dfs.DFSMain();

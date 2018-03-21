@@ -59,14 +59,16 @@ namespace PembangkitMatkulNew
                 {
                     if (SimpulBFS.DaftarSimpul[pair.Key].TetanggaMasuk == 0)
                     {
+                        SimpulBFS.DaftarSimpul[pair.Key].Semester = SimpulBFS.semesterX;
                         DaftarMatkulSemester.Add(SimpulBFS.DaftarSimpul[pair.Key]);
                         if (i == 1)
                         {
-                            graph.AddNode(SimpulBFS.DaftarSimpul[pair.Key].Nama);
+                            graph.AddNode("Semester "+ SimpulBFS.DaftarSimpul[pair.Key].Semester + ": "+ SimpulBFS.DaftarSimpul[pair.Key].Nama);
                             CetakGambar();
                         }
                     }
                 }
+                SimpulBFS.semesterX++;
                 DaftarTerurutBFS.Add(DaftarMatkulSemester);
                 foreach (SimpulBFS simpul in DaftarMatkulSemester)
                 {
@@ -117,7 +119,7 @@ namespace PembangkitMatkulNew
                 {
                     if (tetangga == S.Nama)
                     {
-                        graph.AddEdge(pair.Key, S.Nama);
+                        graph.AddEdge("Semester " + SimpulBFS.DaftarSimpul[pair.Key].Semester + ": " + SimpulBFS.DaftarSimpul[pair.Key].Nama, "Semester " + S.Semester + ": " + S.Nama);
                         i++;
                     }
                 }
@@ -134,7 +136,7 @@ namespace PembangkitMatkulNew
             = new Microsoft.Msagl.GraphViewerGdi.GraphRenderer
             (graph);
             renderer.CalculateLayout();
-            int width = 200;
+            int width = 2000;
             Bitmap bitmap = new Bitmap(width, (int)(graph.Height *
             (width / graph.Width)), PixelFormat.Format32bppPArgb);
             renderer.Render(bitmap);

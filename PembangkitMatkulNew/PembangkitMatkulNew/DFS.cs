@@ -57,7 +57,7 @@ namespace PembangkitMatkulNew
             {
                 foreach (string tetangga in SimpulDFS.KumpulanSimpul[pair.Key].Tetangga)
                 {
-                    graph.AddEdge(pair.Key + ", m=" + SimpulDFS.KumpulanSimpul[pair.Key].Mulai + ", s=" + SimpulDFS.KumpulanSimpul[pair.Key].Selesai, tetangga + ", m="+ SimpulDFS.KumpulanSimpul[tetangga].Mulai + ", s=" + SimpulDFS.KumpulanSimpul[tetangga].Selesai);
+                    graph.AddEdge(pair.Key + "\n m=" + SimpulDFS.KumpulanSimpul[pair.Key].Mulai + ", s=" + SimpulDFS.KumpulanSimpul[pair.Key].Selesai, tetangga + "\n m="+ SimpulDFS.KumpulanSimpul[tetangga].Mulai + ", s=" + SimpulDFS.KumpulanSimpul[tetangga].Selesai);
                 }
             }
             
@@ -65,7 +65,7 @@ namespace PembangkitMatkulNew
             = new Microsoft.Msagl.GraphViewerGdi.GraphRenderer
             (graph);
             renderer.CalculateLayout();
-            int width = 500;
+            int width = 2000;
             Bitmap bitmap = new Bitmap(width, (int)(graph.Height *
             (width / graph.Width)), PixelFormat.Format32bppPArgb);
             renderer.Render(bitmap);
@@ -86,7 +86,7 @@ namespace PembangkitMatkulNew
             = new Microsoft.Msagl.GraphViewerGdi.GraphRenderer
             (graph);
             renderer.CalculateLayout();
-            int width = 500;
+            int width = 2000;
             Bitmap bitmap = new Bitmap(width, (int)(graph.Height *
             (width / graph.Width)), PixelFormat.Format32bppPArgb);
             renderer.Render(bitmap);
