@@ -23,6 +23,7 @@ namespace PembangkitMatkulNew
             }
         }
         public void DFSMain()
+        /*Fungsi ini dapat dibilang merupakan fungsi main pada algoritma DFS. Fungsi ini akan memilih simpul2 yang jumlah sisi masuknya 0*/
         {
             foreach (KeyValuePair<string, SimpulDFS> pair in SimpulDFS.KumpulanSimpul)
             {
@@ -34,6 +35,7 @@ namespace PembangkitMatkulNew
             DaftarTerurutDFS.Reverse();
         }
         public void DFSRekursif(SimpulDFS S)
+        /*Fungsi ini yang akan menelusuri simpul secara mendalam. Fungsi ini mencatat waktu mulai dan selesai suatu simpul. */
         {
             S.Mulai = ++S.Waktu;
             this.CetakLangkahDFS();
@@ -51,6 +53,7 @@ namespace PembangkitMatkulNew
             DaftarTerurutDFS.Add(S);
         }
         public void CetakLangkahDFS()
+        /*Fungsi ini dipanggil untuk memasukkan simpul ke dalam tipe data graph yang disediakan oleh kakas MSAGL, lalu mencetak graph yang telah dimasuki simpul baru tersebut. Fungsi ini memperlihatkan status mulai dan selesai tiap node*/
         {
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
             foreach (KeyValuePair<string, SimpulDFS> pair in SimpulDFS.KumpulanSimpul)
@@ -72,6 +75,7 @@ namespace PembangkitMatkulNew
             bitmap.Save("stateDFS"+ SimpulDFS.waktu + ".png");
         }
         public void CetakHasilDFS()
+        /*Fungsi ini mencetak hasil akhir dari pengurutan matakuliah.*/
         {
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
             foreach (SimpulDFS simpul in DaftarTerurutDFS)
